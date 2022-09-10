@@ -39,7 +39,7 @@ const projectList = [
 
 export default function ProjectList() {
   return (
-    <div data-aos="fade-up">
+    <div data-aos="fade-up" id='projects'>
       <span className="relative flex text-white font-bold w-fit m-auto text-2xl mt-20 -mb-20 md:text-4xl after:w-full after:bg-white after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
         Projects
       </span>
