@@ -2,6 +2,7 @@ import React from "react";
 import Project from "../Project/Project";
 import todoImg from "../../assets/todo.png";
 import eboxImg from "../../assets/project-2.png";
+import capImg from '../../assets/capstone.png'
 
 const projectList = [
   // {
@@ -15,14 +16,24 @@ const projectList = [
   //   address: "https://nextjs-todo-project.vercel.app",
   // },
   {
-    id: "item2",
+    id: "item1",
     title: "E-box VLU",
     img: eboxImg,
     description:
       "Main functions: question management, chat, notification management, account management, ... and more. Please read README.md on github for more information",
     technologies: ["React", "Redux-toolkit", "TailwindCss", "Socket.io"],
-    github: "https://github.com/TravisClark/E-box-VLU-Client",
+    github: "https://github.com/TMT-Mo/Mo-portfolio",
     address: "https://jovial-cobbler-3fdbeb.netlify.app/E-boxVLU",
+  },
+  {
+    id: "item2",
+    title: "Capstone",
+    img: capImg,
+    description:
+      "The project is still in development...",
+    technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
+    github: "https://github.com/TMT-Mo/Capstone-Project",
+    address: "",
   },
 ];
 
