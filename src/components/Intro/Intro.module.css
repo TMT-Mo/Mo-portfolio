@@ -1,0 +1,60 @@
+.intro{
+    animation: introShow .5s forwards;
+    animation-delay: 4s;
+}
+.logo{
+    animation: kick 4s forwards alternate;
+}
+.imgLogo{
+    animation: imgLogoShow 4s linear forwards alternate;
+}
+
+@keyframes introShow {
+    0%{
+        transform: translateY(0%);
+        opacity: 1
+    }
+    100%{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+}
+
+@keyframes kick {
+    0%{
+        opacity: 0;
+        transform: translateY(40%);
+    }
+    70%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    80%{
+        transform: rotate(45deg);
+    }
+    90%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes imgLogoShow{
+    0%{
+        opacity: 0;
+        transform: translateY(40%);
+    }
+    40%{
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    85% {
+        transform: rotate(0deg);
+        margin-left: 0;
+    }
+    100%{
+        transform: rotate(360deg);
+        margin-left: 100px;
+    }
+}

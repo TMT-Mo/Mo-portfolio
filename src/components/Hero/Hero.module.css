@@ -1,0 +1,33 @@
+.blob-1{
+    animation: 10s firstMove infinite alternate;
+}
+
+@keyframes firstMove {
+    0%{
+        transform: translateX(0%)
+    }
+    33%{
+        transform: translateY(60%)
+    }
+    100%{
+        transform: translateX(100%)
+    }
+}
+
+.blob-2{
+    animation: 10s secondMove infinite alternate;
+}
+
+@keyframes secondMove {
+    0%{
+        transform: translateX(0%)
+    }
+    33%{
+        transform: translateY(-60%);
+        transform: translateX(-50%)
+    }
+    100%{
+        transform: translateX(-100%);
+        transform: translateY(100%)
+    }
+}
