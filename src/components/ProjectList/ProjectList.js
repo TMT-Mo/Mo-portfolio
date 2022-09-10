@@ -30,7 +30,7 @@ const projectList = [
     title: "Capstone",
     img: capImg,
     description:
-      "The project is still in development...",
+      "The project is still in development process...",
     technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
     github: "https://github.com/TMT-Mo/Capstone-Project",
     address: "",
