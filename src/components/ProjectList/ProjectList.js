@@ -2,7 +2,7 @@ import React from "react";
 import Project from "../Project/Project";
 import todoImg from "../../assets/todo.png";
 import eboxImg from "../../assets/project-2.png";
-import capImg from '../../assets/capstone.png'
+import capImg from "../../assets/capstone.png";
 
 const projectList = [
   // {
@@ -22,24 +22,23 @@ const projectList = [
     description:
       "Main functions: question management, chat, notification management, account management, ... and more. Please read README.md on github for more information",
     technologies: ["React", "Redux-toolkit", "TailwindCss", "Socket.io"],
-    github: "https://github.com/TMT-Mo/Mo-portfolio",
+    github: "https://github.com/TMT-Mo/E-box-VLU-Client",
     address: "https://jovial-cobbler-3fdbeb.netlify.app/E-boxVLU",
   },
   {
     id: "item2",
     title: "Capstone",
     img: capImg,
-    description:
-      "The project is still in development process...",
+    description: "The project is still in development process...",
     technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
-    github: "https://github.com/TMT-Mo/Capstone-Project",
+    github: "https://github.com/TMT-Mo/capstone-project-client",
     address: "",
   },
 ];
 
 export default function ProjectList() {
   return (
-    <div data-aos="fade-up" id='projects'>
+    <div data-aos="fade-up" id="projects">
       <span className="relative flex text-white font-bold w-fit m-auto text-2xl mt-20 -mb-20 md:text-4xl after:w-full after:bg-white after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
         Projects
       </span>
