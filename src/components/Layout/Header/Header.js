@@ -8,7 +8,9 @@ const Header = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const [changeNavColor, setChangeNavColor] = useState(false);
   let hamBtnClass = `${classes.hamburger} block self-end focus:outline-none md:hidden`;
-  let mobileNavOpen = navIsOpen ? classes.mobileNavOpen : classes.mobileNavClose;
+  let mobileNavOpen = navIsOpen
+    ? classes.mobileNavOpen
+    : classes.mobileNavClose;
   const openNavHandler = () => {
     setNavIsOpen((prevState) => !prevState);
   };
@@ -18,17 +20,20 @@ const Header = () => {
   }
   // Change navbar background color
   const changeNavBg = () => {
-    if(window.scrollY >= 50 ){
+    if (window.scrollY >= 50) {
       setChangeNavColor(true);
-    }
-    else {
+    } else {
       setChangeNavColor(false);
     }
-  }
-  window.addEventListener('scroll', changeNavBg)
+  };
+  window.addEventListener("scroll", changeNavBg);
   return (
     <nav>
-      <Container className={`${changeNavColor ? classes.active : ''} fixed min-w-full z-10 flex text-white justify-around md:flex-row`} >
+      <Container
+        className={`${
+          changeNavColor ? classes.active : ""
+        } fixed min-w-full z-10 flex text-white justify-around md:flex-row`}
+      >
         <div className="flex flex-row z-10 space-x-2">
           <span className="font-bold text-5xl flex flex-row">
             M
@@ -41,7 +46,9 @@ const Header = () => {
           <span className="font-bold text-2xl self-end">portfolio</span>
         </div>
         {/* Mobile nav */}
-        <div className={`${mobileNavOpen} hidden absolute z-0 flex-col justify-center items-center space-y-12 min-w-full h-screen bg-black -mt-4`}>
+        <div
+          className={`${mobileNavOpen} hidden absolute z-0 flex-col justify-center items-center space-y-12 min-w-full h-screen bg-black -mt-4`}
+        >
           <div className="flex flex-col text-center space-y-4">
             <a
               href="#projects"
@@ -117,14 +124,18 @@ const Header = () => {
           </a>
         </div>
         <div className="hidden flex-row space-x-6 self-end md:flex">
-          <a href="https://www.facebook.com/minhtriet1712001/" target="_blank" rel="noreferrer" >
+          <a
+            href="https://www.facebook.com/minhtriet1712001/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <img
               src={fbLogo}
               className="h-8 rounded-full bg-gray-300 transition duration-500 ease-out hover:bg-white hover:scale-110"
-              alt="" 
+              alt=""
             />
           </a>
-          <a href="https://github.com/TravisClark" target="_blank" rel="noreferrer" >
+          <a href="https://github.com/TMT-Mo" target="_blank" rel="noreferrer">
             <img
               src={githubLogo}
               className="h-8 rounded-full bg-gray-300 transition duration-500 ease-out hover:bg-white hover:scale-110"

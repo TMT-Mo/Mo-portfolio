@@ -20,20 +20,22 @@ const projectList = [
     title: "E-box VLU",
     img: eboxImg,
     description:
-      "Main functions: question management, chat, notification management, account management, ... and more. Please read README.md on github for more information",
+      "Main functions: question management, chat, notification management, account management, ... and more. Please read README.md on github for full accessibility",
     technologies: ["React", "Redux-toolkit", "TailwindCss", "Socket.io"],
     github: "https://github.com/TMT-Mo/E-box-VLU-Client",
     address: "https://jovial-cobbler-3fdbeb.netlify.app/E-boxVLU",
+    isProcessing: false,
   },
-  {
-    id: "item2",
-    title: "Capstone",
-    img: capImg,
-    description: "The project is still in development process...",
-    technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
-    github: "https://github.com/TMT-Mo/capstone-project-client",
-    address: "",
-  },
+  // {
+  //   id: "item2",
+  //   title: "Capstone",
+  //   img: capImg,
+  //   description: "The project is still in development process...",
+  //   technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
+  //   github: "https://github.com/TMT-Mo/capstone-project-client",
+  //   address: "",
+  //   isProcessing: true
+  // },
 ];
 
 export default function ProjectList() {

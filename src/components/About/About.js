@@ -17,7 +17,7 @@ const About = () => {
             <div className={classes.content}>
               <img src={Avatar} alt="" />
               <h2>
-                A 3rd year student
+                A final year student
                 <br />
                 <span>A front-end developer</span>
               </h2>
@@ -27,8 +27,8 @@ const About = () => {
             </div>
           </div>
           <p className="border-2 border-white border-double py-10 px-8 tracking-wider text-justify text-white text-lg md:w-1/2 xl:w-1/3 lg:py-20">
-            Currently, I am a junior who is self-taught and
-            really determined on becoming a good frontend developer. With all of
+            Currently, I am a 4th year student who is self-taught and really
+            determined on becoming a good frontend developer. With all of
             effort, I will try my best to contribute to any projects!
           </p>
         </div>

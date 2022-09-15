@@ -28,7 +28,7 @@ const Contact = () => {
               <img src={homeIcon} className="h-8 w-8 self-center" alt="" />
               <div className="flex flex-col ">
                 <span className="font-bold">My Address</span>
-                <span>151 Huynh Van Banh street, Phu Nhuan district, Ho Chi Minh</span>
+                <span>Ho Chi Minh city.</span>
               </div>
             </div>
             <div className="flex flex-row w-full border rounded-md border-gray-400 bg-white space-x-8 p-4 ">
