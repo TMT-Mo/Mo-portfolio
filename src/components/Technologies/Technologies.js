@@ -1,18 +1,20 @@
 import Container from "../UI/Container/Container";
-// import htmlIcon from "../../assets/icons8-html-5.svg";
-// import cssIcon from "../../assets/icons8-css3.svg";
-// import tailwindIcon from "../../assets/tailwind-css.svg";
-// import jsIcon from "../../assets/icons8-javascript.svg";
-// import sassIcon from "../../assets/icons8-sass.svg";
-// import nextIcon from "../../assets/nextjs.svg";
-// import reduxIcon from "../../assets/icons8-redux.svg";
-// import materialIcon from "../../assets/icons8-material-ui.svg";
-// import reactIcon from "../../assets/icons8-react.svg";
-// import typescript from "../../assets/typescript-svgrepo-com.svg";
-// import classes from "./Technologies.module.css";
+import htmlIcon from "../../assets/icons8-html-5.svg";
+import cssIcon from "../../assets/icons8-css3.svg";
+import tailwindIcon from "../../assets/tailwind-css.svg";
+import jsIcon from "../../assets/icons8-javascript.svg";
+import sassIcon from "../../assets/icons8-sass.svg";
+import nextIcon from "../../assets/nextjs.svg";
+import reduxIcon from "../../assets/icons8-redux.svg";
+import materialIcon from "../../assets/icons8-material-ui.svg";
+import reactIcon from "../../assets/icons8-react.svg";
+import typescript from "../../assets/typescript-svgrepo-com.svg";
+import classes from "./Technologies.module.css";
 import TagSphere from "../TagSphere/TagSphere";
 import toolIcon from "../../assets/88930-coding.json";
 import Lottie from "react-lottie";
+import React from "react";
+import { Popover, Typography } from "@mui/material";
 const Technologies = () => {
   const defaultOptions = {
     loop: true,
@@ -27,6 +29,17 @@ const Technologies = () => {
     if (innerWidth < 500) return 200;
     else return 400;
   };
+  const [anchorEl, setAnchorEl] = React.useState(null);
+
+  const handlePopoverOpen = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handlePopoverClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
   return (
     <section id="technologies">
       <Container className="flex flex-col space-y-12 mt-36 items-center mx-auto px-6 md:px-16">
@@ -136,13 +149,53 @@ const Technologies = () => {
             </div>
           </div> */}
           <TagSphere />
-          <div className="" style={{ maxWidth: 500 }}>
-            <Lottie
-              options={defaultOptions}
-              height={dimension}
-              width={dimension}
-            />
-          </div>
+          <Typography
+            aria-owns={open ? "mouse-over-popover" : undefined}
+            aria-haspopup="true"
+            onMouseEnter={handlePopoverOpen}
+            onMouseLeave={handlePopoverClose}
+          >
+            <div className="relative" style={{ maxWidth: 500 }}>
+              {/* <Tyora */}
+              <Lottie
+                options={defaultOptions}
+                height={dimension}
+                width={dimension}
+              />
+              <Popover
+                id="mouse-over-popover"
+                sx={{
+                  pointerEvents: "none",
+                }}
+                open={open}
+                anchorEl={anchorEl}
+                anchorOrigin={{
+                  vertical: "bottom",
+                  horizontal: "left",
+                }}
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "left",
+                }}
+                onClose={handlePopoverClose}
+                disableRestoreFocus
+              >
+                <div
+                  className={`${classes["first-card"]} z-30  w-full top-0 group rounded-xl  bg-white`}
+                >
+                  <div className={`flex flex-col space-y-2 text-black p-4`}>
+                    <h1 className="font-medium text-xl">What I can do:</h1>
+                    <ul className="flex flex-col list-disc pl-4">
+                      <li>Call API</li>
+                      <li>Read Libraries/ Frameworks's document</li>
+                      <li>Generate components</li>
+                      <li>Learn to write clean code</li>
+                    </ul>
+                  </div>
+                </div>
+              </Popover>
+            </div>
+          </Typography>
         </div>
       </Container>
     </section>

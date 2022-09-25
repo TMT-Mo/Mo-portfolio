@@ -8,16 +8,18 @@ const Hero = () => {
     <section id="hero">
       <Container className="z-0 relative bg-gradient-to-b items-center justify-center flex flex-col h-screen sm:p-2">
         <div className="flex flex-row">
-          <Blob className={`${classes["blob-1"]} mt-80 h-20 md:ml-0 md:h-60`} />
+          <Blob
+            className={`${classes["blob-1"]} mt-100 h-20 md:ml-0 md:h-60`}
+          />
           <Blob
             className={`${classes["blob-2"]} -mt-40 h-20 md:ml-80 md:h-60`}
           />
         </div>
         <div className="flex absolute flex-row">
           <Blob
-            className={`${classes["blob-1"]} blur-2xl mt-80 ml-0 h-60 md:ml-0`}
+            className={`${classes["blob-1"]} blur-2xl mt-100 h-20 md:ml-0 md:h-60`}
           />
-          <Blob className={`${classes["blob-2"]} blur-2xl -mt-40 ml-80 h-60`} />
+          <Blob className={`${classes["blob-2"]} blur-2xl -mt-40 h-20 md:ml-80 md:h-60`} />
         </div>
         <div
           className={`${classes["hero-animation"]} absolute flex flex-col space-y-8 p-10 text-center items-center md:text-left md:items-start md:w-2/3`}
