@@ -10,12 +10,13 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useMemo, useState } from "react";
 import ProjectList from "./components/ProjectList/ProjectList";
+import TagSphere from "./components/TagSphere/TagSphere";
 function App() {
   const [introIsDisplayed, setIntroIsDisplayed] = useState(true);
 
   useEffect(() => {
-    Aos.init({ duration: 2000 });
-    setTimeout(() => setIntroIsDisplayed(false), 5000);
+    Aos.init({ duration: 500 });
+    setTimeout(() => setIntroIsDisplayed(false), 2500);
   }, []);
   return (
     <>

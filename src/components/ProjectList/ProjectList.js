@@ -26,16 +26,16 @@ const projectList = [
     address: "https://jovial-cobbler-3fdbeb.netlify.app/E-boxVLU",
     isProcessing: false,
   },
-  // {
-  //   id: "item2",
-  //   title: "Capstone",
-  //   img: capImg,
-  //   description: "The project is still in development process...",
-  //   technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
-  //   github: "https://github.com/TMT-Mo/capstone-project-client",
-  //   address: "",
-  //   isProcessing: true
-  // },
+  {
+    id: "item2",
+    title: "Capstone",
+    img: capImg,
+    description: "The project is still in development process...",
+    technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
+    github: "https://github.com/TMT-Mo/capstone-project-client",
+    address: "",
+    isProcessing: true
+  },
 ];
 
 export default function ProjectList() {

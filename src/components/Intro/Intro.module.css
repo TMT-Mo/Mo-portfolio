@@ -1,12 +1,12 @@
 .intro{
     animation: introShow .5s forwards;
-    animation-delay: 4s;
+    animation-delay: 2s;
 }
 .logo{
-    animation: kick 4s forwards alternate;
+    animation: kick 2s forwards alternate;
 }
 .imgLogo{
-    animation: imgLogoShow 4s linear forwards alternate;
+    animation: imgLogoShow 2s linear forwards alternate;
 }
 
 @keyframes introShow {

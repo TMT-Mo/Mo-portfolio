@@ -1,0 +1,15 @@
+.left-extras {
+  /* transform: translate(-100%,-100%); */
+  background-color: aqua;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: -100%;
+}
+.right-extras {
+  transform: translate(100%,-100%);
+  background-color: aqua;
+}
+
+.first-card:hover {
+}

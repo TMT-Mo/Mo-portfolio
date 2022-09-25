@@ -97,7 +97,7 @@ const Header = () => {
           </div>
         </div>
         {/* Desktop nav */}
-        <div className="hidden flex-row space-x-8 self-end font-medium text-gray-400 md:flex">
+        <div className="hidden flex-row space-x-8 self-end font-medium text-gray-400 my-auto md:flex">
           <a
             href="#projects"
             className="text-xl transition duration-700 ease-out hover:text-white hover:scale-110"
@@ -123,7 +123,7 @@ const Header = () => {
             Contact
           </a>
         </div>
-        <div className="hidden flex-row space-x-6 self-end md:flex">
+        <div className="hidden flex-row space-x-6 self-end my-auto md:flex">
           <a
             href="https://www.facebook.com/minhtriet1712001/"
             target="_blank"
