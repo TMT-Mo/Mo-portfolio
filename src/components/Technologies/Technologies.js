@@ -41,18 +41,38 @@ const Technologies = () => {
 
   const open = Boolean(anchorEl);
   return (
-    <section id="technologies">
-      <Container className="flex flex-col space-y-12 mt-36 items-center mx-auto px-6 md:px-16">
-        <span className="relative flex text-white font-bold text-2xl md:text-4xl after:w-full after:bg-white after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
+    <section id="technologies" className={`${classes.technologies} py-16`}>
+      <Container className="flex flex-col space-y-12  items-center mx-auto px-6 md:px-16">
+        <span className="relative flex text-black font-bold text-2xl md:text-4xl after:w-full after:bg-black after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
           Technologies
         </span>
-        <p
-          data-aos="fade-up"
-          className="text-lg text-justify min-w-full md:pl-20 text-gray-400 tracking-wider lg:w-9/12"
-        >
-          These are some technologies that I've learnt <br /> so far through
-          some small projects and courses.
-        </p>
+        <div className="w-full self-start lg:w-1/2">
+          <p
+            data-aos="fade-up"
+            className="text-lg min-w-full md:pl-20 text-black tracking-wider"
+          >
+            These are some technologies that I've learnt so far through some
+            courses on Udemy such as: 
+            <a
+              href="https://www.udemy.com/course/react-the-complete-guide-incl-redux/"
+              className="font-bold underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              React full complete guide
+            </a>
+            ,{" "}
+            <a
+              href="https://www.udemy.com/course/the-web-developer-bootcamp/"
+              className="font-bold underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Web Developer Bootcamp
+            </a>
+            . Others are from university, internship, youtube,...
+          </p>
+        </div>
         <div
           data-aos="fade-up"
           className="flex flex-col space-y-8 min-w-full justify-around items-center md:flex-row md:space-y-0 md:space-x-24 lg:w-9/12"

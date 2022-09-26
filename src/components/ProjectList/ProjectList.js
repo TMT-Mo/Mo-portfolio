@@ -34,14 +34,14 @@ const projectList = [
     technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
     github: "https://github.com/TMT-Mo/capstone-project-client",
     address: "",
-    isProcessing: true
+    isProcessing: true,
   },
 ];
 
 export default function ProjectList() {
   return (
-    <div data-aos="fade-up" id="projects">
-      <span className="relative flex text-white font-bold w-fit m-auto text-2xl mt-20 -mb-20 md:text-4xl after:w-full after:bg-white after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
+    <div data-aos="fade-up" id="projects" className="bg-slate-100 py-16">
+      <span className="relative flex text-black font-bold w-fit m-auto text-2xl  md:text-4xl after:w-full after:bg-black after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
         Projects
       </span>
       <div className="carousel m-auto">

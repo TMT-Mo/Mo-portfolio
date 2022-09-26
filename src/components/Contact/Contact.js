@@ -4,7 +4,7 @@ import homeIcon from "../../assets/home-svgrepo-com.svg";
 import gmailIcon from "../../assets/gmail-svgrepo-com.svg";
 import contactImg from "../../assets/pexels-pixabay-209151.jpg";
 import Lottie from "react-lottie";
-import contact from "../../assets/contact.json";
+import contact from "../../assets/76038-contact-mail.json";
 const Contact = () => {
   const defaultOptions = {
     loop: true,
@@ -20,8 +20,8 @@ const Contact = () => {
     else return 400;
   };
   return (
-    <section id="contact">
-      <Container className="flex flex-col space-y-12 px-6 mt-36 items-center text-black">
+    <section id="contact" className="bg-primary-blue scroll-py-16">
+      <Container className="flex flex-col space-y-12 px-6 items-center text-black">
         <span className="relative flex text-white font-bold text-2xl md:text-4xl after:w-full after:bg-white after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
           Contact
         </span>
@@ -60,7 +60,7 @@ const Contact = () => {
               <img src={gmailIcon} className="h-8 w-8 self-center" alt="" />
               <div className="flex flex-col ">
                 <span className="font-bold">My Email</span>
-                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=minhtriet17101@gmail.com">
+                <a href="https://mail.google.com/mail/?view=cm&fs=1&to=minhtriet17101@gmail.com" className="hover:font-semibold">
                   minhtriet17101@gmail.com
                 </a>
               </div>

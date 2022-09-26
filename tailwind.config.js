@@ -7,6 +7,8 @@ module.exports = {
         "dark-blue": "rgba(2,26,52,1) 100%",
         "dark-light-blue": "#02274f",
         splashIntro: "#161616",
+        "primary-blue": "#0033CC",
+        "secondary-blue": 'rgb(0, 96, 255)',
       },
     },
     screens: {

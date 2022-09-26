@@ -13,14 +13,14 @@ import ProjectList from "./components/ProjectList/ProjectList";
 import TagSphere from "./components/TagSphere/TagSphere";
 function App() {
   const [introIsDisplayed, setIntroIsDisplayed] = useState(true);
-
+  
   useEffect(() => {
     Aos.init({ duration: 500 });
     setTimeout(() => setIntroIsDisplayed(false), 2500);
   }, []);
   return (
     <>
-      {introIsDisplayed && <Intro/>}
+      {/* {introIsDisplayed && <Intro/>} */}
       <Header/>
       {useMemo(()=> <Hero/>,[])}
       <About/>

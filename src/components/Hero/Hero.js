@@ -3,44 +3,84 @@ import { ReactComponent as Blob } from "../../assets/blob_6-6-39555.svg";
 import classes from "./Hero.module.css";
 import MyResume from "../../cv/cv.pdf";
 import mouseIcon from "../../assets/noun-mouse-scroll-496875.svg";
+import Lottie from "react-lottie";
+import coding from "../../assets/71619-coding.json";
 const Hero = () => {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: coding,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
+  const { innerWidth } = window;
+  const dimension = () => {
+    if (innerWidth < 500) return 200;
+    else return 400;
+  };
   return (
-    <section id="hero">
-      <Container className="z-0 relative bg-gradient-to-b items-center justify-center flex flex-col h-screen sm:p-2">
-        <div className="flex flex-row">
-          <Blob
+    <section id="hero" className="bg-slate-200">
+      <Container
+        className={`z-0 relative items-center justify-center flex flex-col h-screen min-w-full p-0 `}
+      >
+        <div
+          className={`${classes["bg-effect"]} flex flex-row w-full absolute left-0 h-full`}
+        >
+          {/* <Blob
             className={`${classes["blob-1"]} mt-100 h-20 md:ml-0 md:h-60`}
           />
           <Blob
             className={`${classes["blob-2"]} -mt-40 h-20 md:ml-80 md:h-60`}
-          />
+          /> */}
         </div>
-        <div className="flex absolute flex-row">
+        {/* <div className="flex absolute flex-row">
           <Blob
             className={`${classes["blob-1"]} blur-2xl mt-100 h-20 md:ml-0 md:h-60`}
           />
-          <Blob className={`${classes["blob-2"]} blur-2xl -mt-40 h-20 md:ml-80 md:h-60`} />
-        </div>
+          <Blob
+            className={`${classes["blob-2"]} blur-2xl -mt-40 h-20 md:ml-80 md:h-60`}
+          />
+        </div> */}
         <div
-          className={`${classes["hero-animation"]} absolute flex flex-col space-y-8 p-10 text-center items-center md:text-left md:items-start md:w-2/3`}
+          // data-aos={setTimeout(() => "fade-up", [2000])}
+          className={`${classes["hero-animation"]} flex absolute w-full items-center justify-between flex-col md:flex-row lg:justify-evenly 2xl:w-2/3`}
         >
-          <p className="text-2xl text-white font-medium lg:text-6xl md:text-4xl">
-            Welcome To My Personal Portfolio
-          </p>
-          <p className="text-md text-justify text-gray-400 md:text-xl lg:text-2xl">
-            Hi! My name is Triet but you can call me Mo. This is a portfolio of
-            a student who intends to become a professional{" "}
-            <span className="text-white uppercase font-medium">
-              front-end dev
-            </span>{" "}
-            in the next few years. Please feel free to look around and hopefully
-            you can give me some feedbacks. Thank you so much!
-          </p>
-          <a href={MyResume} download={MyResume}>
-            <button className="px-8 py-4 border border-blue-600 w-fit text-white font-medium rounded-xl bg-transparent transition duration-500 hover:bg-white hover:text-black hover:border-0 hover:scale-105">
-              Download CV
-            </button>
-          </a>
+          <div className="flex flex-col  space-y-8 p-10 text-center items-center mt-32 md:text-left md:items-start md:w-1/2 md:mt-0">
+            <p className="text-2xl text-white font-medium lg:text-6xl md:text-4xl">
+              Welcome To My Personal Portfolio
+            </p>
+            <p className="text-md text-justify text-gray-400 md:text-xl lg:text-2xl">
+              Hi! My name is Triet but you can call me Mo. This is a portfolio
+              of a student who intends to become a professional{" "}
+              <span className="text-white uppercase font-medium">
+                front-end dev
+              </span>{" "}
+              in the next few years. Please feel free to look around and
+              hopefully you can give me some feedbacks. Thank you so much!
+            </p>
+            <a href={MyResume} download={MyResume}>
+              <button
+                className={` px-8 py-4 border group relative border-blue-600 w-fit text-white font-medium hover:text-black rounded-xl overflow-hidden bg-transparent`}
+              >
+                Download CV
+                <div className={`absolute hidden top-0 left-0 ${classes.downloadBtn} group-hover:block`}>
+                  <button
+                    className={`px-8 py-4 border relative w-fit whitespace-nowrap text-black font-medium`}
+                  >
+                    Download CV
+                  </button>
+                </div>
+              </button>
+            </a>
+          </div>
+          <div style={{ maxWidth: 400 }}>
+            <Lottie
+              options={defaultOptions}
+              height={dimension}
+              width={dimension}
+            />
+          </div>
           {/* <div className="w-24 self-center flex flex-col animate-bounce -bottom-24 absolute items-center">
             <svg
               xmlns="http://www.w3.org/2000/svg"

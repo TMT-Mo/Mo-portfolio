@@ -4,12 +4,12 @@ const Project = ({ className, projectList }) => {
   return (
     <>
       {projectList.map((project) => (
-        <section id={project.id} className="carousel-item w-full">
+        <section id={project.id} className="carousel-item w-full pt-10">
           <Container
-            className={`flex flex-col px-6 space-y-12 mt-36 items-center `}
+            className={`flex flex-col px-6 space-y-12 items-center `}
           >
             <div data-aos="fade-up" className="flex justify-center">
-              <div className="rounded-xl flex flex-col border-2 border-gray-700 shadow-md items-center w-full shadow-slate-400 space-y-6 p-6 transition duration-700 hover:scale-105 hover:shadow-2xl sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/3">
+              <div className="rounded-xl flex flex-col border-2 bg-primary-blue shadow-md items-center w-full shadow-slate-400 space-y-6 p-6 transition duration-700 hover:scale-105 hover:shadow-2xl sm:w-2/3 md:w-1/2 lg:w-1/3 xl:w-1/3">
                 <a href={project.address}>
                   <button disabled={project.isProcessing}>
                     <img src={project.img} className="rounded-xl " alt="" />
@@ -18,7 +18,7 @@ const Project = ({ className, projectList }) => {
                 <span className="text-sky-500 text-2xl font-bold relative flex justify-center after:absolute after:w-1/2 after:bg-sky-500 after:h-1 after:mt-12">
                   {project.title}
                 </span>
-                <p className="text-gray-400 text-lg text-justify pt-6">
+                <p className="text-white text-lg text-justify pt-6">
                   {project.description}
                 </p>
                 <div className="flex flex-col items-center w-full md:flex-row">

@@ -337,8 +337,6 @@ export default function TagSphere(props) {
     return () => cancelAnimationFrame(animationFrame);
   }, [mouseX, mouseY, lessSpeed, active, items, props.radius]);
 
-  console.log("first");
-
   return (
     <div
       ref={containerRef}

@@ -11,5 +11,7 @@
   background-color: aqua;
 }
 
-.first-card:hover {
+.technologies{
+  background: rgb(241,241,241);
+background: radial-gradient(circle, rgba(241,241,241,1) 0%, rgba(148,187,233,1) 100%);
 }

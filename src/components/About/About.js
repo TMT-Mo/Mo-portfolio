@@ -1,5 +1,5 @@
 import Container from "../UI/Container/Container";
-// import classes from "./About.module.css";
+import classes from "./About.module.css";
 // import Avatar from "../../assets/avartar.png";
 // import MyResume from "../../cv/cv.pdf";
 import Lottie from "react-lottie";
@@ -20,9 +20,9 @@ const About = () => {
     else return 400;
   };
   return (
-    <section id="about">
+    <section id="about" className="bg-slate-200">
       <Container className="flex flex-col px-6 items-center">
-        <span className="relative flex text-white mb-16 font-bold text-2xl md:text-4xl after:w-full after:bg-white after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
+        <span className="relative flex text-black mb-16 font-bold text-2xl md:text-4xl after:w-full after:bg-black after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
           About me
         </span>
         <div
@@ -49,11 +49,22 @@ const About = () => {
               width={dimension}
             />
           </div>
-          <p className="border-2 border-white border-double py-10 px-8 tracking-wider text-justify text-white text-lg md:w-1/2 xl:w-1/3 lg:py-20">
-            Currently, I am a 4th year student who is self-taught and really
-            determined on becoming a good frontend developer. With all of
-            effort, I will try my best to contribute to any projects!
-          </p>
+          <div className="relative group cursor-pointer bg-white rounded-xl shadow-sm py-10 px-8 tracking-wider text-justify text-black text-lg md:w-1/2 xl:w-1/3 lg:py-10">
+            <p>
+              <span className="font-bold text-secondary-blue underline">Little of me:<br/></span>
+              Currently, I am a 4th year student who is self-taught and really
+              determined on becoming a good frontend developer. With all of
+              effort, I will try my best to contribute to any projects!
+            </p>
+            <div className={`${classes['second-about']} hidden group-hover:block`}>
+            <p>
+            <span className="font-bold text-white underline">Achievement:<br/></span>
+              My university: Van Lang uni.<br/>
+              GPA: 3.32 =&gt; 8.35.<br/>
+              TOEIC: 670/ 990.<br/>
+            </p>
+            </div>
+          </div>
         </div>
       </Container>
     </section>

@@ -7,7 +7,7 @@ import classes from "./Header.module.css";
 const Header = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const [changeNavColor, setChangeNavColor] = useState(false);
-  let hamBtnClass = `${classes.hamburger} block self-end focus:outline-none md:hidden`;
+  let hamBtnClass = `${classes.hamburger} block self-end z-30 focus:outline-none md:hidden`;
   let mobileNavOpen = navIsOpen
     ? classes.mobileNavOpen
     : classes.mobileNavClose;
@@ -16,7 +16,7 @@ const Header = () => {
   };
 
   if (navIsOpen) {
-    hamBtnClass = `${classes.hamburger} ${classes.open} block self-end focus:outline-none md:hidden`;
+    hamBtnClass = `${classes.hamburger} ${classes.open} block z-30 self-end focus:outline-none md:hidden`;
   }
   // Change navbar background color
   const changeNavBg = () => {
@@ -30,11 +30,12 @@ const Header = () => {
   return (
     <nav>
       <Container
-        className={`${
-          changeNavColor ? classes.active : ""
-        } fixed min-w-full z-10 flex text-white justify-around md:flex-row`}
+        className={` fixed min-w-full z-50 flex text-white justify-around md:flex-row`}
       >
-        <div className="flex flex-row z-10 space-x-2">
+        <div
+          className={`${changeNavColor ? classes.active : classes.inactive} min-w-full absolute top-0 left-0 h-full`}
+        ></div>
+        <div  className="flex flex-row z-50 space-x-2">
           <span className="font-bold text-5xl flex flex-row">
             M
             <img
@@ -47,7 +48,7 @@ const Header = () => {
         </div>
         {/* Mobile nav */}
         <div
-          className={`${mobileNavOpen} hidden absolute z-0 flex-col justify-center items-center space-y-12 min-w-full h-screen bg-black -mt-4`}
+          className={`${mobileNavOpen} hidden absolute z-10 flex-col justify-center items-center space-y-12 min-w-full h-screen bg-black -mt-4`}
         >
           <div className="flex flex-col text-center space-y-4">
             <a
@@ -79,7 +80,7 @@ const Header = () => {
               Contact
             </a>
           </div>
-          <div className="flex-row space-x-6 flex">
+          <div className="flex-row z-10 space-x-6 flex">
             <a href="https://www.facebook.com/minhtriet1712001/">
               <img
                 src={fbLogo}
@@ -87,7 +88,7 @@ const Header = () => {
                 alt=""
               />
             </a>
-            <a href="https://github.com/TravisClark">
+            <a href="https://github.com/TMT-Mo">
               <img
                 src={githubLogo}
                 className="h-8 rounded-full bg-gray-300 transition duration-500 ease-out hover:bg-white hover:scale-110"
@@ -97,7 +98,10 @@ const Header = () => {
           </div>
         </div>
         {/* Desktop nav */}
-        <div className="hidden flex-row space-x-8 self-end font-medium text-gray-400 my-auto md:flex">
+        <div
+          data-aos="fade-down"
+          className="hidden flex-row space-x-8 z-10 self-end font-medium text-gray-400 my-auto md:flex"
+        >
           <a
             href="#projects"
             className="text-xl transition duration-700 ease-out hover:text-white hover:scale-110"
@@ -123,7 +127,10 @@ const Header = () => {
             Contact
           </a>
         </div>
-        <div className="hidden flex-row space-x-6 self-end my-auto md:flex">
+        <div
+          data-aos="fade-down"
+          className="hidden flex-row space-x-6 z-10 self-end my-auto md:flex"
+        >
           <a
             href="https://www.facebook.com/minhtriet1712001/"
             target="_blank"

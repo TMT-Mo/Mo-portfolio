@@ -5,6 +5,24 @@
     rgba(2, 0, 36, 1) 0%,
     rgba(2, 26, 52, 1) 100%
   );
+  animation-duration: .2s;
+  animation-name: navOpen;
+  animation-timing-function: ease-in;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.inactive{
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    100deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(2, 26, 52, 1) 100%
+  );
+  /* background-color: transparent; */
+  animation-duration: .8s;
+  animation-name: navClose;
+  animation-timing-function: ease-in;
+  clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
 .hamburger {
@@ -58,15 +76,15 @@
 
 .mobileNavOpen {
   display: flex;
-  animation: navOpen 0.5s forwards;
+  animation: navMobileOpen 0.5s forwards;
 }
 
 .mobileNavClose {
   display: flex;
-  animation: navClose 0.5s forwards;
+  animation: navMobileClose 0.5s forwards;
 }
 
-@keyframes navClose {
+@keyframes navMobileClose {
   from {
     transform: translateX(0%);
   }
@@ -76,7 +94,7 @@
   }
 }
 
-@keyframes navOpen {
+@keyframes navMobileOpen {
   from {
     transform: translateX(100%);
   }
@@ -85,12 +103,26 @@
   }
 }
 
-@keyframes hero-animation {
+@keyframes navOpen {
   from {
-    opacity: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
   }
 
   to {
-    opacity: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+
   }
 }
+
+@keyframes navClose {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  
+  to {
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+
+  }
+}
+
+

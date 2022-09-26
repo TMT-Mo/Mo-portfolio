@@ -1,33 +1,133 @@
-.blob-1{
-    animation: 10s firstMove infinite alternate;
+.hero-animation {
+  opacity: 0;
+  animation: heroAppears 0.5s forwards;
+  animation-delay: 0.8s;
+}
+
+.bg-effect {
+  clip-path: polygon(100%);
+  background-color: #0033cc;
+  animation-duration: 0.6s;
+  animation-name: clipPathAnimated;
+  animation-timing-function: ease-in;
+}
+
+.blob-1 {
+  animation: 10s firstMove infinite alternate;
+}
+
+
+.downloadBtn{
+  /* background-color: #fff;
+  clip-path: polygon(0 0, 47% 0, 24% 23%, 0 44%); */
+  /* padding: 32px 16px;
+  border: 1px solid #0033cc;
+  width: fit-content; */
+}
+
+.downloadBtn {
+  background-color: #fff;
+  color: #000;
+  border: none;
+  animation-duration: 0.3s;
+  animation-name: btnAnimated;
+  animation-timing-function: ease-in;
+  clip-path: circle(141.4% at 0 0);
+}
+
+@keyframes btnAnimated {
+  from {
+    clip-path: circle(38.9% at 0 0);
+  }
+  to {
+    clip-path: circle(141.4% at 0 0);
+  }
 }
 
 @keyframes firstMove {
-    0%{
-        transform: translateX(0%)
-    }
-    33%{
-        transform: translateY(60%)
-    }
-    100%{
-        transform: translateX(100%)
-    }
+  0% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateY(60%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
 
-.blob-2{
-    animation: 10s secondMove infinite alternate;
+.blob-2 {
+  animation: 10s secondMove infinite alternate;
 }
 
 @keyframes secondMove {
-    0%{
-        transform: translateX(0%)
-    }
-    33%{
-        transform: translateY(-60%);
-        transform: translateX(-50%)
-    }
-    100%{
-        transform: translateX(-100%);
-        transform: translateY(100%)
-    }
+  0% {
+    transform: translateX(0%);
+  }
+  33% {
+    transform: translateY(-60%);
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(-100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes heroAppears {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    display: flex;
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+
+@keyframes clipPathAnimated {
+  0% {
+    /* clip-path: ellipse(20%); */
+    /* transform: scale(0.1); */
+    /* transform: translateY(-100%), scale(0.1); */
+    /* opacity: 0; */
+    clip-path: ellipse(0% 0% at 0% 0%);
+  }
+
+  /* 60% {
+        transform: scale(1.2);
+        opacity: 1;
+        clip-path: ellipse(50%);
+   } */
+
+  100% {
+    /* transform: translateY(0%), scale(1); */
+    /* transform: scale(1); */
+    clip-path: ellipse(60% 60% at 50% 33%);
+    /* opacity: 1; */
+  }
+}
+
+@keyframes clipPathAnimatedMobile {
+  from {
+    clip-path: polygon(0%);
+  }
+  to {
+    clip-path: polygon(100%);
+  }
+}
+
+@media (min-width: 480px) {
+  .bg-effect {
+    /* transform: skew(-180deg); */
+    background-color: #0033cc;
+    clip-path: ellipse(60% 60% at 50% 33%);
+    /* transition: all 2s ease-in-out; */
+    /* margin-top: -16px; */
+    animation-name: clipPathAnimated;
+    animation-duration: 0.6s;
+    animation-timing-function: ease-in;
+    /* animation-iteration-count: ; */
+  }
 }
