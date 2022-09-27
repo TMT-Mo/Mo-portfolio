@@ -21,7 +21,7 @@ const Contact = () => {
   };
   return (
     <section id="contact" className="bg-primary-blue scroll-py-16">
-      <Container className="flex flex-col space-y-12 px-6 items-center text-black">
+      <Container className="flex flex-col space-y-4 px-6 py-16 items-center text-black">
         <span className="relative flex text-white font-bold text-2xl md:text-4xl after:w-full after:bg-white after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
           Contact
         </span>
@@ -44,7 +44,7 @@ const Contact = () => {
               <img src={phoneIcon} className="h-8 w-8 self-center" alt="" />
               <div className="flex flex-col ">
                 <span className="font-bold">Phone Number</span>
-                <a className="" href="tel:+84775509168">
+                <a href="tel:+84775509168" className='hover:font-semibold'>
                   0775509168
                 </a>
               </div>
@@ -56,7 +56,7 @@ const Contact = () => {
                 <span>Ho Chi Minh city.</span>
               </div>
             </div>
-            <div className="flex flex-row w-full border rounded-md border-gray-400 bg-white space-x-8 p-4 ">
+            <div className="flex flex-row w-full overflow-hidden border rounded-md border-gray-400 bg-white space-x-8 p-4 ">
               <img src={gmailIcon} className="h-8 w-8 self-center" alt="" />
               <div className="flex flex-col ">
                 <span className="font-bold">My Email</span>

@@ -22,10 +22,10 @@ const Hero = () => {
   return (
     <section id="hero" className="bg-slate-200">
       <Container
-        className={`z-0 relative items-center justify-center flex flex-col h-screen min-w-full p-0 `}
+        className={`z-0 relative items-center justify-center py-20 flex flex-col h-fit min-w-full p-0 md:h-screen`}
       >
         <div
-          className={`${classes["bg-effect"]} flex flex-row w-full absolute left-0 h-full`}
+          className={`${classes["bg-effect"]} flex absolute flex-row w-full h-full`}
         >
           {/* <Blob
             className={`${classes["blob-1"]} mt-100 h-20 md:ml-0 md:h-60`}
@@ -44,9 +44,9 @@ const Hero = () => {
         </div> */}
         <div
           // data-aos={setTimeout(() => "fade-up", [2000])}
-          className={`${classes["hero-animation"]} flex absolute w-full items-center justify-between flex-col md:flex-row lg:justify-evenly 2xl:w-2/3`}
+          className={`${classes["hero-animation"]} flex w-full items-center justify-between flex-col md:flex-row lg:justify-evenly 2xl:w-2/3`}
         >
-          <div className="flex flex-col  space-y-8 p-10 text-center items-center mt-32 md:text-left md:items-start md:w-1/2 md:mt-0">
+          <div className="flex flex-col  space-y-8 p-10 text-center items-center mt-10 md:text-left md:items-start md:w-1/2 md:mt-0">
             <p className="text-2xl text-white font-medium lg:text-6xl md:text-4xl">
               Welcome To My Personal Portfolio
             </p>
@@ -55,8 +55,7 @@ const Hero = () => {
               of a student who intends to become a professional{" "}
               <span className="text-white uppercase font-medium">
                 front-end dev
-              </span>{" "}
-              in the next few years. Please feel free to look around and
+              </span> in the next few years. Please feel free to look around and
               hopefully you can give me some feedbacks. Thank you so much!
             </p>
             <a href={MyResume} download={MyResume}>
@@ -64,7 +63,9 @@ const Hero = () => {
                 className={` px-8 py-4 border group relative border-blue-600 w-fit text-white font-medium hover:text-black rounded-xl overflow-hidden bg-transparent`}
               >
                 Download CV
-                <div className={`absolute hidden top-0 left-0 ${classes.downloadBtn} group-hover:block`}>
+                <div
+                  className={`absolute hidden top-0 left-0 ${classes.downloadBtn} group-hover:block`}
+                >
                   <button
                     className={`px-8 py-4 border relative w-fit whitespace-nowrap text-black font-medium`}
                   >
@@ -74,7 +75,7 @@ const Hero = () => {
               </button>
             </a>
           </div>
-          <div style={{ maxWidth: 400 }}>
+          <div style={{ maxWidth: 400 }} className="flex">
             <Lottie
               options={defaultOptions}
               height={dimension}

@@ -21,7 +21,7 @@ const About = () => {
   };
   return (
     <section id="about" className="bg-slate-200">
-      <Container className="flex flex-col px-6 items-center">
+      <Container className="flex flex-col px-6 py-20 items-center">
         <span className="relative flex text-black mb-16 font-bold text-2xl md:text-4xl after:w-full after:bg-black after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
           About me
         </span>
@@ -49,20 +49,31 @@ const About = () => {
               width={dimension}
             />
           </div>
-          <div className="relative group cursor-pointer bg-white rounded-xl shadow-sm py-10 px-8 tracking-wider text-justify text-black text-lg md:w-1/2 xl:w-1/3 lg:py-10">
+          <div className="relative group cursor-pointer bg-white rounded-xl shadow-sm py-10 px-8 tracking-wider  text-black text-md lg:text-justify lg:text-lg md:w-1/2 xl:w-1/3 lg:py-10">
             <p>
-              <span className="font-bold text-secondary-blue underline">Little of me:<br/></span>
+              <span className="font-bold text-secondary-blue underline">
+                Little of me:
+                <br />
+              </span>
               Currently, I am a 4th year student who is self-taught and really
-              determined on becoming a good frontend developer. With all of
-              effort, I will try my best to contribute to any projects!
+              determined on becoming{" "}
+              <span className="font-bold">a good frontend developer</span>. With
+              all of effort, I will try my best to contribute to any projects!
             </p>
-            <div className={`${classes['second-about']} hidden group-hover:block`}>
-            <p>
-            <span className="font-bold text-white underline">Achievement:<br/></span>
-              My university: Van Lang uni.<br/>
-              GPA: 3.32 =&gt; 8.35.<br/>
-              TOEIC: 670/ 990.<br/>
-            </p>
+            <div
+              className={`${classes["second-about"]} hidden group-hover:block`}
+            >
+              <p>
+                <span className="font-bold text-white underline">
+                  Something else:
+                </span>
+                <ul className="list-disc pl-3">
+                  <li>My university: Van Lang uni.</li>
+                  <li>Major: Software Engineering.</li>
+                  <li>GPA: 3.32 =&gt; 8.35.</li>
+                  <li>TOEIC: 670/ 990.</li>
+                </ul>
+              </p>
             </div>
           </div>
         </div>

@@ -25,6 +25,14 @@ const projectList = [
     github: "https://github.com/TMT-Mo/E-box-VLU-Client",
     address: "https://jovial-cobbler-3fdbeb.netlify.app/E-boxVLU",
     isProcessing: false,
+    account: [{
+      username: 'Admin account: 197ad00001',
+      password: 'Password: VLU00001'
+    },
+  {
+      username: 'Student account: 197st00001',
+      password: 'Password: VLU00001'
+    }]
   },
   {
     id: "item2",
@@ -40,7 +48,7 @@ const projectList = [
 
 export default function ProjectList() {
   return (
-    <div data-aos="fade-up" id="projects" className="bg-slate-100 py-16">
+    <div data-aos="fade-up" id="projects" className="bg-slate-200 py-16  relative">
       <span className="relative flex text-black font-bold w-fit m-auto text-2xl  md:text-4xl after:w-full after:bg-black after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
         Projects
       </span>

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../../../assets/bxl-digitalocean.svg";
 import fbLogo from "../../../assets/bxl-facebook.svg";
 import githubLogo from "../../../assets/bxl-github.svg";
@@ -7,16 +7,15 @@ import classes from "./Header.module.css";
 const Header = () => {
   const [navIsOpen, setNavIsOpen] = useState(false);
   const [changeNavColor, setChangeNavColor] = useState(false);
-  let hamBtnClass = `${classes.hamburger} block self-end z-30 focus:outline-none md:hidden`;
-  let mobileNavOpen = navIsOpen
-    ? classes.mobileNavOpen
-    : classes.mobileNavClose;
+  let hamBtnClass = `${classes.hamburger} block self-end z-30 focus:outline-none lg:hidden`;
+  let mobileNavOpen = navIsOpen && classes.mobileNavOpen
+
   const openNavHandler = () => {
     setNavIsOpen((prevState) => !prevState);
   };
-
+  
   if (navIsOpen) {
-    hamBtnClass = `${classes.hamburger} ${classes.open} block z-30 self-end focus:outline-none md:hidden`;
+    hamBtnClass = `${classes.hamburger} ${classes.open} block z-30 self-end focus:outline-none lg:hidden`;
   }
   // Change navbar background color
   const changeNavBg = () => {
@@ -33,7 +32,7 @@ const Header = () => {
         className={` fixed min-w-full z-50 flex text-white justify-around md:flex-row`}
       >
         <div
-          className={`${changeNavColor ? classes.active : classes.inactive} min-w-full absolute top-0 left-0 h-full`}
+          className={`${changeNavColor ? classes.active : classes.inactive} min-w-full absolute drop-shadow-md top-0 left-0 h-full`}
         ></div>
         <div  className="flex flex-row z-50 space-x-2">
           <span className="font-bold text-5xl flex flex-row">
@@ -100,7 +99,7 @@ const Header = () => {
         {/* Desktop nav */}
         <div
           data-aos="fade-down"
-          className="hidden flex-row space-x-8 z-10 self-end font-medium text-gray-400 my-auto md:flex"
+          className="hidden flex-row space-x-8 z-10 self-end font-medium text-gray-400 my-auto lg:flex"
         >
           <a
             href="#projects"
@@ -129,7 +128,7 @@ const Header = () => {
         </div>
         <div
           data-aos="fade-down"
-          className="hidden flex-row space-x-6 z-10 self-end my-auto md:flex"
+          className="hidden flex-row space-x-6 z-10 self-end my-auto lg:flex"
         >
           <a
             href="https://www.facebook.com/minhtriet1712001/"

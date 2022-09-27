@@ -209,7 +209,8 @@ const Technologies = () => {
                       <li>Call API</li>
                       <li>Read Libraries/ Frameworks's document</li>
                       <li>Generate components</li>
-                      <li>Learn to write clean code</li>
+                      <li>Willing to write clean code</li>
+                      <li>Cooperate with Backend</li>
                     </ul>
                   </div>
                 </div>

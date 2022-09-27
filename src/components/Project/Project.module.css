@@ -1,0 +1,16 @@
+.projectFadeIn {
+  background-color: rgba(55,65,81);
+  animation-duration: 0.2s;
+  animation-name: fadeIn;
+  animation-timing-function: ease-in;
+  clip-path: circle(130% at 50% 0);
+}
+
+@keyframes fadeIn {
+  from {
+    clip-path: circle(0.4% at 50% 0);
+  }
+  to {
+    clip-path: circle(130% at 50% 0);
+  }
+}
