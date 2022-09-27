@@ -26,7 +26,7 @@ const Project = ({ className, projectList }) => {
                 >
                   {project.account &&
                     project.account.map((item) => (
-                      <div className="flex flex-col">
+                      <div className="flex flex-col text-white">
                         <span>{item.username}</span>
                         <span>{item.password}</span>
                       </div>

@@ -27,11 +27,11 @@ const projectList = [
     isProcessing: false,
     account: [{
       username: 'Admin account: 197ad00001',
-      password: 'Password: VLU00001'
+      password: 'Password: 32343638'
     },
   {
       username: 'Student account: 197st00001',
-      password: 'Password: VLU00001'
+      password: 'Password: 32343638'
     }]
   },
   {
