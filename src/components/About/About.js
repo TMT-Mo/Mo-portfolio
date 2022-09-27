@@ -55,7 +55,7 @@ const About = () => {
                 Little of me:
                 <br />
               </span>
-              Currently, I am a 4th year student who is self-taught and really
+              Currently, I am a final year student who is self-taught and seriously
               determined on becoming{" "}
               <span className="font-bold">a good frontend developer</span>. With
               all of effort, I will try my best to contribute to any projects!

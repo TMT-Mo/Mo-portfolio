@@ -50,10 +50,10 @@ const Hero = () => {
             <p className="text-2xl text-white font-medium lg:text-6xl md:text-4xl">
               Welcome To My Personal Portfolio
             </p>
-            <p className="text-md text-justify text-gray-400 md:text-xl lg:text-2xl">
+            <p className="text-md text-justify text-slate-300 md:text-xl lg:text-2xl">
               Hi! My name is Triet but you can call me Mo. This is a portfolio
               of a student who intends to become a professional{" "}
-              <span className="text-white uppercase font-medium">
+              <span className="text-white uppercase font-semibold">
                 front-end dev
               </span> in the next few years. Please feel free to look around and
               hopefully you can give me some feedbacks. Thank you so much!
