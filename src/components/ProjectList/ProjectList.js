@@ -36,6 +36,16 @@ const projectList = [
   },
   {
     id: "item2",
+    title: "Tic-tac-toe",
+    img: capImg,
+    description: "Just a normal tic-tac-toe game with a little advanced",
+    technologies: ["React"],
+    github: "https://github.com/TMT-Mo/tic-tac-toe",
+    address: "https://tmt-mo.github.io/tic-tac-toe/",
+    isProcessing: false,
+  },
+  {
+    id: "item3",
     title: "Capstone",
     img: capImg,
     description: "The project is still in development process...",
@@ -44,6 +54,8 @@ const projectList = [
     address: "",
     isProcessing: true,
   },
+  
+  
 ];
 
 export default function ProjectList() {

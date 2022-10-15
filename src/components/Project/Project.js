@@ -37,17 +37,23 @@ const Project = ({ className, projectList }) => {
                       <span className="p-2 bg-blue-300 whitespace-nowrap text-blue-600 opacity-100 font-semibold border rounded-xl">
                         {project.technologies[0]}
                       </span>
-                      <span className="p-2 bg-blue-300 whitespace-nowrap text-blue-600 opacity-100 font-semibold border rounded-xl">
-                        {project.technologies[1]}
-                      </span>
+                      {project.technologies[1] && (
+                        <span className="p-2 bg-blue-300 whitespace-nowrap text-blue-600 opacity-100 font-semibold border rounded-xl">
+                          {project.technologies[1]}
+                        </span>
+                      )}
                     </div>
                     <div className="flex flex-row space-x-2 justify-around w-full">
-                      <span className="p-2 bg-blue-300 whitespace-nowrap text-blue-600 opacity-100 font-semibold border rounded-xl">
-                        {project.technologies[2]}
-                      </span>
-                      <span className="p-2 bg-blue-300 whitespace-nowrap text-blue-600 opacity-100 font-semibold border rounded-xl">
-                        {project.technologies[3]}
-                      </span>
+                      {project.technologies[2] && (
+                        <span className="p-2 bg-blue-300 whitespace-nowrap text-blue-600 opacity-100 font-semibold border rounded-xl">
+                          {project.technologies[2]}
+                        </span>
+                      )}
+                      {project.technologies[3] && (
+                        <span className="p-2 bg-blue-300 whitespace-nowrap text-blue-600 opacity-100 font-semibold border rounded-xl">
+                          {project.technologies[3]}
+                        </span>
+                      )}
                     </div>
                   </div>
                   {!project.isProcessing && (
