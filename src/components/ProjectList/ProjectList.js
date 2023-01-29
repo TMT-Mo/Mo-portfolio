@@ -5,18 +5,18 @@ import eboxImg from "../../assets/project-2.png";
 import capImg from "../../assets/capstone.png";
 
 const projectList = [
-  // {
-  //   id: "item1",
-  //   title: "TODO List",
-  //   img: todoImg,
-  //   description:
-  //     "With my todo website, users can utilize it for authentication, fetching, adding, removing and updating data.",
-  //   technologies: ["Next JS", "Redux-toolkit", "React", "Material-UI"],
-  //   github: "https://github.com/TravisClark/mo-portfolio.git",
-  //   address: "https://nextjs-todo-project.vercel.app",
-  // },
   {
     id: "item1",
+    title: "E-Form",
+    img: capImg,
+    description: "The project is still in development process...",
+    technologies: ["React", "Redux-toolkit", "MUI", "Typescript"],
+    github: "https://github.com/TMT-Mo/E-Form-client.git",
+    address: "https://e-form.netlify.app",
+    isProcessing: false,
+  },
+  {
+    id: "item2",
     title: "E-box VLU",
     img: eboxImg,
     description:
@@ -34,26 +34,17 @@ const projectList = [
       password: 'Password: 32343638'
     }]
   },
-  {
-    id: "item2",
-    title: "Tic-tac-toe",
-    img: capImg,
-    description: "Just a normal tic-tac-toe game with a little advanced",
-    technologies: ["React"],
-    github: "https://github.com/TMT-Mo/tic-tac-toe",
-    address: "https://tmt-mo.github.io/tic-tac-toe/",
-    isProcessing: false,
-  },
-  {
-    id: "item3",
-    title: "Capstone",
-    img: capImg,
-    description: "The project is still in development process...",
-    technologies: ["React", "Redux-toolkit", "Scss", "Typescript"],
-    github: "https://github.com/TMT-Mo/capstone-project-client",
-    address: "",
-    isProcessing: true,
-  },
+  // {
+  //   id: "item3",
+  //   title: "Tic-tac-toe",
+  //   img: capImg,
+  //   description: "Just a normal tic-tac-toe game with a little advanced",
+  //   technologies: ["React"],
+  //   github: "https://github.com/TMT-Mo/tic-tac-toe",
+  //   address: "https://tmt-mo.github.io/tic-tac-toe/",
+  //   isProcessing: false,
+  // },
+  
   
   
 ];

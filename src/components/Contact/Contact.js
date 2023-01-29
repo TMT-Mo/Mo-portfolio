@@ -52,14 +52,14 @@ const Contact = () => {
             <div className="flex flex-row w-full border rounded-md border-gray-400 bg-white space-x-8 p-4 ">
               <img src={homeIcon} className="h-8 w-8 self-center" alt="" />
               <div className="flex flex-col ">
-                <span className="font-bold">My Address</span>
+                <span className="font-bold">Location</span>
                 <span>Ho Chi Minh city.</span>
               </div>
             </div>
             <div className="flex flex-row w-full overflow-hidden border rounded-md border-gray-400 bg-white space-x-8 p-4 ">
               <img src={gmailIcon} className="h-8 w-8 self-center" alt="" />
               <div className="flex flex-col ">
-                <span className="font-bold">My Email</span>
+                <span className="font-bold">Email</span>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=minhtriet17101@gmail.com" className="hover:font-semibold">
                   minhtriet17101@gmail.com
                 </a>
