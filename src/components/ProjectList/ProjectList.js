@@ -9,10 +9,11 @@ const projectList = [
     id: "item1",
     title: "E-Form",
     img: capImg,
-    description: "The project is still in development process...",
+    description:
+      "E-Form is a software that manages digital application form designed to help individuals and businesses create, manage, and store application forms electronically. This type of software simplifies the process of creating, tracking, and executing applications, making it easier for businesses to manage their files. Please read Readme for full details.",
     technologies: ["React", "Redux-toolkit", "MUI", "Typescript"],
-    github: "https://github.com/TMT-Mo/E-Form-client.git",
-    address: "https://e-form.netlify.app",
+    github: "https://lnkd.in/gRaNnVxR",
+    address: "https://lnkd.in/gRaNnVxR",
     isProcessing: false,
   },
   {
@@ -25,14 +26,16 @@ const projectList = [
     github: "https://github.com/TMT-Mo/E-box-VLU-Client",
     address: "https://jovial-cobbler-3fdbeb.netlify.app/E-boxVLU",
     isProcessing: false,
-    account: [{
-      username: 'Admin account: 197ad00001',
-      password: 'Password: 32343638'
-    },
-  {
-      username: 'Student account: 197st00001',
-      password: 'Password: 32343638'
-    }]
+    account: [
+      {
+        username: "Admin account: 197ad00001",
+        password: "Password: 32343638",
+      },
+      {
+        username: "Student account: 197st00001",
+        password: "Password: 32343638",
+      },
+    ],
   },
   // {
   //   id: "item3",
@@ -44,14 +47,15 @@ const projectList = [
   //   address: "https://tmt-mo.github.io/tic-tac-toe/",
   //   isProcessing: false,
   // },
-  
-  
-  
 ];
 
 export default function ProjectList() {
   return (
-    <div data-aos="fade-up" id="projects" className="bg-slate-200 py-16  relative">
+    <div
+      data-aos="fade-up"
+      id="projects"
+      className="bg-slate-200 py-16  relative"
+    >
       <span className="relative flex text-black font-bold w-fit m-auto text-2xl  md:text-4xl after:w-full after:bg-black after:h-0.5 after:absolute after:mt-8 after:md:mt-12 ">
         Projects
       </span>
