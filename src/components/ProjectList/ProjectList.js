@@ -13,7 +13,13 @@ const projectList = [
       "E-Form is a software that manages digital application form designed to help individuals and businesses create, manage, and store application forms electronically. This type of software simplifies the process of creating, tracking, and executing applications, making it easier for businesses to manage their files. Please read Readme for full details.",
     technologies: ["React", "Redux-toolkit", "MUI", "Typescript"],
     github: "https://lnkd.in/gRaNnVxR",
-    address: "https://lnkd.in/gRaNnVxR",
+    address: "https://e-form.netlify.app",
+    account: [
+      {
+        username: "Admin account: admin",
+        password: "Password: P@ssw0rd",
+      }
+    ],
     isProcessing: false,
   },
   {
@@ -23,18 +29,14 @@ const projectList = [
     description:
       "Main functions: question management, chat, notification management, account management, ... and more. Please read README.md on github for full accessibility",
     technologies: ["React", "Redux-toolkit", "TailwindCss", "Socket.io"],
-    github: "https://github.com/TMT-Mo/E-box-VLU-Client",
-    address: "https://jovial-cobbler-3fdbeb.netlify.app/E-boxVLU",
+    github: "https://github.com/TMT-Mo/E-Box-Client.git",
+    address: "https://e-box.netlify.app",
     isProcessing: false,
     account: [
       {
-        username: "Admin account: 197ad00001",
-        password: "Password: 32343638",
-      },
-      {
-        username: "Student account: 197st00001",
-        password: "Password: 32343638",
-      },
+        username: "Admin account: admin",
+        password: "Password: admin",
+      }
     ],
   },
   // {

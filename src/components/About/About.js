@@ -57,8 +57,7 @@ const About = () => {
               </span>
               Currently, I am a final year student who is self-taught and seriously
               determined on becoming{" "}
-              <span className="font-bold">a good frontend developer</span>. With
-              all of effort, I will try my best to contribute to any projects!
+              <span className="font-bold">a good frontend developer</span>. I have some experience working with Node + Express and ReactJS 18 
             </p>
             <div
               className={`${classes["second-about"]} hidden group-hover:block`}
